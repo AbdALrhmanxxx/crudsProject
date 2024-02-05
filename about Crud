@@ -1,0 +1,9 @@
+CRUDS :
+c: mean create --> data
+r: mean read   --> data
+u: mean update --> data
+d: mean delete --> data
+s: mean search --> data
+
+this is manage system to manage data 
+

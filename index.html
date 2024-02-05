@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CRUDs</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="" type="icon" />
+    <link rel="icon" href="icons8-fivem.gif" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="crud">
+      <div class="mod"><img src="mods/icons8-dark-mode-50.png" /></div>
+      <div class="head">
+        <h2>CRUD</h2>
+        <p>PRODUCT MANAEMENT SYSTEM</p>
+      </div>
+      <div class="inputs">
+        <input type="text" id="title" placeholder="title" />
+        <div class="price">
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            id="price"
+            placeholder="Price"
+          />
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            id="taxes"
+            placeholder="taxes"
+          />
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            id="ads"
+            placeholder="ads"
+          />
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            id="discount"
+            placeholder="discount"
+          />
+          <div id="total">total:$0<span id="total"></span></div>
+        </div>
+        <input type="number" id="count" placeholder="count" />
+        <input type="text" id="category" placeholder="category" />
+        <button type="submit" id="submit">Create</button>
+      </div>
+      <div class="outputs">
+        <div class="search">
+          <input
+            id="search"
+            type="text"
+            placeholder="Search"
+            onkeyup="searchData(this.value)"
+          />
+          <div class="btn-search">
+            <button id="searchTitel" onclick="getSearchMood(this.id)">
+              Search by Title
+            </button>
+            <button id="searchCategory" onclick="getSearchMood(this.id)">
+              Search by Category
+            </button>
+          </div>
+          <div id="btn-delete-all"></div>
+        </div>
+        <table>
+          <thead>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Ads</th>
+            <th>Discount</th>
+            <th>total</th>
+            <th>Category</th>
+            <th>UpDate</th>
+            <th>Delete</th>
+          </thead>
+          <tbody id="render"></tbody>
+        </table>
+      </div>
+      <script src="index.js"></script>
+    </div>
+  </body>
+</html>
